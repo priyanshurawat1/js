@@ -2,7 +2,7 @@
 
 // Object literals
 mySym = Symbol(1)
-console.log(typeof mySym);
+// console.log(typeof mySym);
 
 const JsUser = {
     name : 'Priyanshu',
@@ -14,9 +14,19 @@ const JsUser = {
     [mySym]: 'key1'
 }
 
-console.log(JsUser.location);
-console.log(JsUser['location']);
-console.log(JsUser['fullname']);
-console.log(JsUser.fullname);
-console.log(JsUser[mySym]);
-console.log(JsUser);
+// console.log(JsUser.location);
+// console.log(JsUser['location']);
+// console.log(JsUser['fullname']);
+// console.log(JsUser.fullname);
+// console.log(JsUser[mySym]);
+// console.log(JsUser);
+
+JsUser.greeting = function(){
+    console.log("Good Morning");
+}
+console.log(JsUser.greeting());
+
+JsUser.greetingTwo = function(){
+    console.log(`Good Morning, ${this.fullname}`);
+}
+console.log(JsUser.greetingTwo());
